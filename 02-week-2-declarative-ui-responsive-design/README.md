@@ -55,21 +55,39 @@ Widget test disimpan di `test/` untuk memverifikasi:
 Dijalankan dengan `flutter test`, hasil: **[isi hasilnya di sini]**
 
 ## Screenshot
-- `screenshots/responsive dashboard 2 terang.jpg` — tampilan layar terang.
-- `screenshots/responsive dashboard 2 gelap.jpg` — tampilan layar gelap.
-- `screenshots/tugas layar sempit.jpg` — tampilan layar sempit (1 kolom).
-- `screenshots/tugas kalau layar lebar.jpg` — tampilan layar lebar (2 kolom).
-- `screenshots/eksperimen layout.jpg` — eksperimen layout.
-- `screenshots/tugas utama.jpg` — tugas utama.
+
+### Layar terang
+![Tampilan layar terang](screenshots/responsive%20dashboard%202%20terang.jpg)
+
+### Layar gelap
+![Tampilan layar gelap](screenshots/responsive%20dashboard%202%20gelap.jpg)
+
+### Layar sempit (1 kolom)
+![Tampilan layar sempit](screenshots/tugas%20layar%20sempit.jpg)
+
+### Layar lebar (2 kolom)
+![Tampilan layar lebar](screenshots/tugas%20kalau%20layar%20lebar.jpg)
+
+### Eksperimen layout
+![Eksperimen layout](screenshots/eksperimen%20layout.jpg)
+
+### Tugas utama
+![Tugas utama](screenshots/tugas%20utama.jpg)
+
 ## Checklist Verifikasi
 - [x] `flutter analyze` tidak menghasilkan error
 - [x] `flutter test` lulus semua widget test responsif
 - [x] Aplikasi berjalan di ukuran layar sempit dan lebar
 - [x] Dark mode memiliki kontras dan teks yang terbaca
 - [x] Screenshot, folder `test/`, dan README sudah tersimpan
+
 ## Bukti
-- `screenshots/flutter analyze.jpg` — Bukti keberhasilan flutter test.
-- `screenshots/flutter test.jpg` — Bukti keberhasilan flutter test.
+
+### Flutter Analyze
+![Bukti flutter analyze](screenshots/flutter_analyze.jpg)
+
+### Flutter Test
+![Bukti flutter test](screenshots/flutter_test.jpg)
 
 ## Refleksi
 - **Perbedaan imperative vs declarative:** Imperative itu mengubah UI manual step-by-step, sdgkn declarative mendeskripsikan tampilan berdasarkan state, Flutter yang mengurus rebuild-nya secara otomatis.
