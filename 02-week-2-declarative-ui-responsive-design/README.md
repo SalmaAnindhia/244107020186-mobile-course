@@ -52,8 +52,6 @@ Widget test disimpan di `test/` untuk memverifikasi:
 - Dashboard menampilkan 1 kolom pada layar sempit (`<700px` lebar).
 - Dashboard menampilkan 2 kolom pada layar lebar (`>700px` lebar).
 
-Dijalankan dengan `flutter test`, hasil: **[isi hasilnya di sini]**
-
 ## Screenshot
 
 ### Layar terang
