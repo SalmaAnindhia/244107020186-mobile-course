@@ -60,7 +60,7 @@ Dijalankan dengan `flutter test`, hasil: **[isi hasilnya di sini]**
 ![Tampilan layar terang](screenshots/responsive%20dashboard%202%20terang.jpg)
 
 ### Layar gelap
-![Tampilan layar gelap](screenshots/responsive%20dashboard%202%20gelap.jpg)
+![Tampilan layar gelap](screenshots/resposive%20dashboard%202%20gelap.jpg)
 
 ### Layar sempit (1 kolom)
 ![Tampilan layar sempit](screenshots/tugas%20layar%20sempit.jpg)
