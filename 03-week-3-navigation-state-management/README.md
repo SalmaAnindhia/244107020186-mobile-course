@@ -49,12 +49,16 @@ Prompt, output AI, dan verifikasi lengkap ada di folder `docs/`. Ringkasan:
 
 ## Screenshots
 
+### GoRouter
 ![GoRouter](screenshots/SS%20praktikum1.jpg)
 ![Click item](screenshots/SS%20praktikum1a.jpg)
+### State management dengan Riverpod
 ![State management dengan Riverpod](screenshots/SS%20praktikum2.jpg)
 ![Bisa menambah tugas](screenshots/SS%20praktikum2a.jpg)
+### AsyncValue
 ![AsyncValue](screenshots/SS%20praktikum3.jpg)
 ![AsyncValue gagal](screenshots/SS%20praktikum3a.jpg)
+### AI Challenge
 ![AI Challenge](screenshots/SS%20praktikumai1.jpg)
 
 ## Refactoring dan testing
@@ -95,8 +99,8 @@ class TodoTile extends ConsumerWidget {
 
 ### 2. Mengekstrak logika 
 
-![Hasil](screenshots/refactoring-1.jpg)
-![Hasil](screenshots/refactoring-1a.jpg)
+![Hasil](screenshots/refactoring%201.jpg)
+![Hasil](screenshots/refactoring%201a.jpg)
 
 ### 3. Integrasikan aplikasi ToDo dengan GoRouter untuk daftar dan untuk halaman statistik
 ![Hasil](screenshots/berpindah.jpg)
