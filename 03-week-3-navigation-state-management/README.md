@@ -57,6 +57,54 @@ Prompt, output AI, dan verifikasi lengkap ada di folder `docs/`. Ringkasan:
 ![AsyncValue gagal](screenshots/SS%20praktikum3a.jpg)
 ![AI Challenge](screenshots/SS%20praktikumai1.jpg)
 
+## Refactoring dan testing
+### 1. Ekstrak TodoTile menjadi widget terpisah
+**`lib/widgets/todo_tile.dart`**
+```dart
+import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
+import '../providers/todo_provider.dart';
+
+class TodoTile extends ConsumerWidget {
+  final Todo todo;
+  final int index;
+
+  const TodoTile({super.key, required this.todo, required this.index});
+
+  @override
+  Widget build(BuildContext context, WidgetRef ref) {
+    return ListTile(
+      leading: Checkbox(
+        value: todo.done,
+        onChanged: (_) => ref.read(todoListProvider.notifier).toggle(index),
+      ),
+      title: Text(
+        todo.title,
+        style: TextStyle(
+          decoration: todo.done ? TextDecoration.lineThrough : null,
+        ),
+      ),
+      trailing: IconButton(
+        icon: const Icon(Icons.delete),
+        onPressed: () => ref.read(todoListProvider.notifier).remove(index),
+      ),
+    );
+  }
+}
+```
+
+### 2. Mengekstrak logika 
+
+![Hasil](screenshots/refactoring-1.jpg)
+![Hasil](screenshots/refactoring-1a.jpg)
+
+### 3. Integrasikan aplikasi ToDo dengan GoRouter untuk daftar dan untuk halaman statistik
+![Hasil](screenshots/berpindah.jpg)
+
+### 4. Testing
+![Hasil](screenshots/flutter%20analyze.jpg)
+
+
 ## Refleksi
 
 **Kenapa stale data + indikator refresh kadang lebih baik daripada layar kosong?**
