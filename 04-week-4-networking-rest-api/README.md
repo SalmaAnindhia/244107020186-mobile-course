@@ -1,11 +1,5 @@
 # Minggu 4: Networking & REST API (Flutter)
 
-> **Nama:** [ISI NAMA] | **NIM:** [ISI NIM] | **Kelas:** [ISI KELAS]
-
-Aplikasi Flutter yang menampilkan daftar data dari REST API ([JSONPlaceholder](https://jsonplaceholder.typicode.com)) dengan arsitektur **UI → Provider (Riverpod) → Repository → Dio → API**. Aplikasi menangani empat state tampilan (loading, error, empty, success), mendukung pagination dengan infinite scroll, dan memiliki halaman detail post.
-
----
-
 ## Tujuan
 
 - Memahami konsep HTTP, REST API, dan JSON.
@@ -25,73 +19,6 @@ Aplikasi Flutter yang menampilkan daftar data dari REST API ([JSONPlaceholder](h
 6. **Model `fromJson` aman null** sehingga tidak crash saat field hilang atau tipe berubah.
 7. **Pesan error ramah pengguna** untuk timeout, gagal koneksi, 401/403, 404, dan error server.
 8. **Hasil AI Challenge:** repository layer untuk endpoint `/comments` (lihat folder `docs/`).
-
-## Stack Teknologi
-
-| Teknologi | Fungsi |
-| --- | --- |
-| Flutter / Dart | Framework aplikasi |
-| [dio](https://pub.dev/packages/dio) | HTTP client (timeout, interceptor, error terstruktur) |
-| [flutter_riverpod](https://pub.dev/packages/flutter_riverpod) | State management (`AsyncNotifier`, `Notifier`, `FutureProvider`) |
-| [go_router](https://pub.dev/packages/go_router) | Navigasi ke halaman detail |
-| JSONPlaceholder | API dummy (tanpa API key) |
-
-## Struktur Folder
-
-```
-04-week-4-networking-rest-api/
-├── lib/
-│   ├── main.dart
-│   ├── data/
-│   │   ├── api_client.dart          # konfigurasi Dio terpusat
-│   │   ├── network_errors.dart      # friendlyErrorMessage
-│   │   ├── providers.dart           # dioProvider, postListProvider, postDetailProvider
-│   │   ├── paged_posts.dart         # state + notifier pagination
-│   │   ├── comment_providers.dart   # hasil AI Challenge
-│   │   ├── models/                  # Post (dan model Comment)
-│   │   └── repositories/            # PostRepository (dan CommentRepository)
-│   ├── pages/
-│   │   ├── post_list_page.dart
-│   │   ├── paged_post_page.dart
-│   │   └── post_detail_page.dart
-│   └── widgets/
-│       └── post_tile.dart
-├── test/
-│   └── post_test.dart
-├── docs/                            # dokumentasi AI Challenge
-├── screenshots/
-└── README.md
-```
-
-## Cara Menjalankan
-
-```bash
-# 1. Masuk ke folder project
-cd 04-week-4-networking-rest-api
-
-# 2. Install dependency
-flutter pub get
-
-# 3. Jalankan di emulator atau perangkat
-flutter run
-
-# 4. Analisis kode dan jalankan test
-flutter analyze
-flutter test
-```
-
-Halaman awal adalah daftar post (`/`). Halaman infinite scroll tersedia di route `/paged`, dan halaman detail dibuka dengan mengetuk salah satu post.
-
-## Arsitektur
-
-```
-UI (ConsumerWidget) --watch--> Provider (AsyncValue)
-Provider --panggil--> Repository --pakai--> Dio --HTTP--> REST API
-```
-
-- **UI** hanya membaca provider dan tidak pernah memanggil Dio.
-- **Repository** adalah satu-satunya pintu ke API. Exception dibiarkan naik.
-- **Provider** mengubah exception menjadi `AsyncError` secara otomatis, lalu UI menampilkan pesan ramah lewat `friendlyErrorMessage`.
 
 ## Hasil
 
