@@ -90,7 +90,7 @@ Dokumentasi lengkap (prompt, output awal AI, tabel perbandingan, hasil verifikas
 
 **Keputusan:** SharedPreferences untuk preferensi, sqflite (SQLite) untuk catatan.
 
-## Refleksi
+## Refleksii
 
 **1. Mengapa daftar catatan tidak boleh disimpan di SharedPreferences?**
 SharedPreferences hanya untuk nilai primitif kecil. Menyimpan daftar catatan sebagai satu string JSON membuat update parsial harus menulis ulang seluruh daftar, tidak ada query (`WHERE`, `ORDER BY`), performa turun seiring bertambahnya data, dan dirty flag per catatan tidak bisa dibuat sehingga sinkronisasi rapuh.
