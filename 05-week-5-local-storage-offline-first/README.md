@@ -86,7 +86,7 @@ Catatan teknis: pada test error, auto-retry Riverpod 3 membuat future tidak pern
 
 ## AI Challenge
 
-Dokumentasi lengkap (prompt, output awal AI, tabel perbandingan, hasil verifikasi, dan keputusan final) ada di [`docs/perbandingan-storage.md`](docs/perbandingan-storage.md).
+Dokumentasi lengkap (prompt, output awal AI, tabel perbandingan, hasil verifikasi, dan keputusan final) ada di [`docs/storage-comparison.md`](docs/storage-comparison.md).
 
 **Keputusan:** SharedPreferences untuk preferensi, sqflite (SQLite) untuk catatan.
 
