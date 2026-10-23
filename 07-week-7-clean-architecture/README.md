@@ -91,8 +91,8 @@ final announcementProvider = FutureProvider.family<Announcement, String>((ref, i
 
 | Fitur | Sebelum refactor | Sesudah refactor |
 |---|---|---|
-| Login | ![Login sebelum](screenshots/login-sebelum.jpg) | ![Login sesudah](screenshots/login-sesudah.jpg) |
-| Pengumuman | ![Pengumuman sebelum](screenshots/pengumuman-sebelum.jpg) | ![Pengumuman sesudah](screenshots/pengumuman-sesudah.jpg) |
+| Login | ![Login sebelum](screenshots/login.jpg) | ![Login sesudah](screenshots/login.jpg) |
+| Pengumuman | ![Pengumuman sebelum](screenshots/pengumuman.jpg) | ![Pengumuman sesudah](screenshots/pengumuman.jpg) |
 
 ### 6. Hasil analyze dan test
 
